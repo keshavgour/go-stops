@@ -4,7 +4,12 @@ import { Button } from "react-native-paper";
 
 const ButtonComponent = () => {
   return (
-    <Button mode="contained" buttonColor="#F00A6C" style={styles.button}>
+    <Button
+      mode="contained"
+      buttonColor="#F00A6C"
+      style={styles.button}
+      onPress={() => console.log("Button Pressed")}
+    >
       BOOK NOW
     </Button>
   );
@@ -16,7 +21,7 @@ const styles = StyleSheet.create({
   button: {
     marginLeft: 20,
     width: 344,
-    height: 40,
+    height: 50,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
   },
