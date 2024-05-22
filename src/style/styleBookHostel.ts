@@ -45,7 +45,7 @@ export const styleBookHostel = StyleSheet.create({
       backgroundColor: "lightgrey",
     },
     dashedLine: {
-      width: 25,
+      width: 30,
       height: 1,
       marginTop: 35,
       borderWidth: 1.3,

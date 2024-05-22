@@ -1,22 +1,27 @@
+import React from "react";
 import { StatusBar } from "expo-status-bar";
 import DashboardPage from "./src/pages/DashboardPage";
-import { StyleSheet, View } from "react-native";
-//import { PaperProvider } from "react-native-paper";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
+import DestinationDetailsPage from "./src/pages/DestinationDetailsPage";
+
+export type RootStackParamList = {
+  Dashboard: undefined;
+  Details: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <View>
-      <DashboardPage />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Dashboard"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Dashboard" component={DashboardPage} />
+        <Stack.Screen name="Details" component={DestinationDetailsPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-// style={styles.container}
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-// });

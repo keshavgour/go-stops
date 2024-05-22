@@ -1,7 +1,5 @@
-export interface Hostel {
-    id: string;
-    name: string;
-}
+import { Hostel } from "./interfaces/interfaceDashboard";
+
 
 export const hostels: Hostel[] = [
     { id: "1", name: "Alibaug" },

@@ -20,7 +20,7 @@ export const styleImageSlider = StyleSheet.create({
       bottom: 40,
       left: 0,
       right: 0,
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      backgroundColor: "rgba(0, 0, 0, 0.2)",
       paddingVertical: 10,
       paddingHorizontal: 20,
       borderBottomLeftRadius: 10,
