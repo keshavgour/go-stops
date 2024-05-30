@@ -1,4 +1,4 @@
-import { FamousPointsItem } from "./interfaces/interfaceDashboard";
+import { FamousPointsItem } from "./interfaces/interfaceDisplay";
 
 export const famousPointsData:FamousPointsItem [] = [
     {

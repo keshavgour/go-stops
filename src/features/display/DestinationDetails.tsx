@@ -9,6 +9,10 @@ import {
 import { styleDestinationDetails } from "../../style/styleDestinationDetails";
 import { ReadMore } from "./ReadMore";
 import { AntDesign } from "@expo/vector-icons";
+import OurHostels from "./OurHostels";
+import { ourhostelsData } from "../../ourHostelsData";
+import LocalExperiences from "./LocalExperiences";
+import { localExperiencesData } from "../../localExperiencesData";
 
 const image = {
   uri: "https://t3.ftcdn.net/jpg/01/40/51/56/360_F_140515612_0MMpqpsIvs6xno5YXmPVy9FUmZ4uLnFB.jpg",
@@ -59,6 +63,8 @@ const DestinationDetails: React.FC = () => {
             </View>
           </TouchableOpacity>
         </View>
+        <OurHostels data={ourhostelsData} />
+        <LocalExperiences localExperiencesData={localExperiencesData} />
       </View>
     </ScrollView>
   );

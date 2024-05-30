@@ -33,6 +33,7 @@ export const styleDestinationDetails = StyleSheet.create({
     },
     text:{
       padding:20,
+      paddingBottom:25,
       fontSize:19,
     },
     showMoreContainer:{

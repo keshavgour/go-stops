@@ -18,9 +18,5 @@ export interface DestinationItem {
     name: string;
 }
 
-export interface FamousPointsItem {
-    id: number;
-    imageUrl:string;
-    pointName:string;
-    description:string;
-}
+
+

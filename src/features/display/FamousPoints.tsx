@@ -1,8 +1,7 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
-import { FamousPointsItem } from "../../interfaces/interfaceDashboard";
-import { styleDestinationDetails } from "../../style/styleDestinationDetails";
 import { styleFamousPoints } from "../../style/styleFamousPoints";
+import { FamousPointsItem } from "../../interfaces/interfaceDisplay";
 
 interface FamousPointProps {
   famousPointsData: FamousPointsItem[];
@@ -10,7 +9,7 @@ interface FamousPointProps {
 
 const FamousPoints: React.FC<FamousPointProps> = ({ famousPointsData }) => {
   return (
-    <ScrollView horizontal={true}>
+    <ScrollView horizontal={true} style={styleFamousPoints.container}>
       {famousPointsData.map((item) => (
         <View key={item.id}>
           <Image
@@ -18,8 +17,10 @@ const FamousPoints: React.FC<FamousPointProps> = ({ famousPointsData }) => {
             style={styleFamousPoints.image}
           ></Image>
           <View>
-            <Text>{item.pointName}</Text>
-            <Text>{item.description}</Text>
+            <Text style={styleFamousPoints.heading}>{item.pointName}</Text>
+            <Text style={styleFamousPoints.description}>
+              {item.description}
+            </Text>
           </View>
         </View>
       ))}

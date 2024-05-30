@@ -1,28 +1,70 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, StyleProp, ViewStyle, TextStyle } from "react-native";
 import { Button } from "react-native-paper";
 
-const ButtonComponent = () => {
+interface ButtonComponentProps {
+  name: string;
+  onPress: () => void;
+  buttonStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+  mode?: "text" | "outlined" | "contained";
+}
+
+const ButtonComponent: React.FC<ButtonComponentProps> = ({
+  name,
+  onPress,
+  buttonStyle,
+  textStyle,
+  mode,
+}) => {
   return (
     <Button
-      mode="contained"
-      buttonColor="#F00A6C"
-      style={styles.button}
-      onPress={() => console.log("Button Pressed")}
+      mode={mode}
+      onPress={onPress}
+      style={[styles.button, buttonStyle]}
+      labelStyle={textStyle}
     >
-      BOOK NOW
+      {name}
     </Button>
   );
 };
 
-export default ButtonComponent;
-
 const styles = StyleSheet.create({
   button: {
-    marginLeft: 20,
+    marginLeft: 0,
     width: 344,
     height: 50,
-    borderTopLeftRadius: 0,
-    borderTopRightRadius: 0,
+    backgroundColor: "#F00A6C",
   },
 });
+
+export default ButtonComponent;
+
+// import React from "react";
+// import { StyleSheet } from "react-native";
+// import { Button } from "react-native-paper";
+
+// const ButtonComponent = () => {
+//   return (
+//     <Button
+//       mode="contained"
+//       buttonColor="#F00A6C"
+//       style={styles.button}
+//       onPress={() => console.log("Button Pressed")}
+//     >
+//       BOOK NOW
+//     </Button>
+//   );
+// };
+
+// export default ButtonComponent;
+
+// const styles = StyleSheet.create({
+//   button: {
+//     marginLeft: 20,
+//     width: 344,
+//     height: 50,
+//     borderTopLeftRadius: 0,
+//     borderTopRightRadius: 0,
+//   },
+// });

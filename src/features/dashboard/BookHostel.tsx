@@ -13,6 +13,7 @@ import DateTimePicker, {
 } from "@react-native-community/datetimepicker";
 import { styleBookHostel } from "../../style/styleBookHostel";
 import { hostels } from "../../hostelData";
+import ButtonComponent from "../../components/ButtonComponent";
 
 const BookHostel: React.FC = () => {
   const [checkInDate, setCheckInDate] = useState<Date | null>(null);

@@ -8,7 +8,7 @@ export const styleBookHostel = StyleSheet.create({
       paddingLeft: 15,
       paddingRight: 15,
       paddingBottom: 22,
-      backgroundColor: "#F4F5F4",
+      backgroundColor: "#EAEAEA",
     },
     button: {
       flexDirection: "row",

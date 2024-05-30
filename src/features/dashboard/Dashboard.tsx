@@ -7,6 +7,7 @@ import ButtonComponent from "../../components/ButtonComponent";
 import { sliderItems } from "../../ImageSliderData";
 import Destination from "./Destination";
 import { destinationData } from "../../destinationData";
+import { styleButton } from "../../style/styleButton";
 
 const Dashboard = () => {
   return (
@@ -15,7 +16,13 @@ const Dashboard = () => {
         <Header logo="https://gostops.com/blog/wp-content/uploads/2020/07/hand-with-gostop-log.png" />
         <ImageSlider sliderItems={sliderItems} />
         <BookHostel />
-        <ButtonComponent />
+        <ButtonComponent
+          name="BOOK NOW"
+          onPress={() => console.log("Pressed")}
+          buttonStyle={styleButton.dashboardButton}
+          textStyle={styleButton.buttonText}
+          mode="contained"
+        />
         <Destination destinationData={destinationData} />
       </ScrollView>
     </View>
